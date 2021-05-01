@@ -1,7 +1,42 @@
 # Initial value assignment
+ტოკენების მონეტიზაცია, რაში იცვლება ტოკენი. ტოკენის გაცვლა ხდება ვალიუში.
 
 1 KOLXI === 2LARI
-2KG PIG MEAT == 24KOLXI
+2KG PIG MEAT == 12KOLXI TOKEN
+
+# mutating global state
+ყოველი ცვლილება აისაახება ტრანზაქციიტ, რომელიც თავისმხრივ ახდენს იუზერის ბალანსის რეკალკულაციას.
+
+მაგგალითი, ბაზისს ცვლილების
+ghostchaser -3
+ghostchaser +3
+
+ყოველი ტრანზაქცია update ს აკეთებს გლობალური state ის.
+
+ტრანზაქცია -> state update
+
+
+! account
+! transaction
+
+
+მაგალითი, პროდუქტის შეძენის
+
+1. განხორციელდა ტრანზაქცია
+ghostchaser -20
+ghostbuster +20
+
+2. განახლდა state
+```json
+  {
+    "balances": {
+      "ghostchaser": 72,
+      "ghostbuster": 28
+    },
+    "transactions": ["transactionID"]
+  }
+```
+
 
 # What white papers are.
 Technical documentation of how blockchain behaivs.

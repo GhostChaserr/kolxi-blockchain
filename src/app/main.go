@@ -10,6 +10,7 @@ import (
 
 	"ghostchaser/kolxi-blockchain/src/models/genesisblock"
 	"ghostchaser/kolxi-blockchain/src/responses/healthresponse"
+	"ghostchaser/kolxi-blockchain/src/service"
 
 	"github.com/gorilla/mux"
 )
@@ -28,6 +29,8 @@ func HealthCheckHandler(response http.ResponseWriter, request *http.Request) {
 func main() {
 
 	fmt.Println("Init server...")
+
+	service.LoadGenesisFromDisk()
 
 	absPath, _ := filepath.Abs("./src/database/genesis/genesis.json")
 	file, err := ioutil.ReadFile(absPath)
