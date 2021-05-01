@@ -1,0 +1,20 @@
+[
+  {
+    "from": {
+      "username": "ghostchaser"
+    },
+    "to": {
+      "username": "ghostbuster"
+    },
+    "amount": 10
+  },
+  {
+    "from": {
+      "username": "ghostbuster"
+    },
+    "to": {
+      "username": "ghostchaser"
+    },
+    "amount": 1
+  }
+]

@@ -1,0 +1,8 @@
+
+{
+  "balances": {
+    "ghostchaser": 92,
+    "ghostbuster": 8
+  },
+  "transactions": ["transactionID"]
+}
